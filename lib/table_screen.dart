@@ -24,7 +24,6 @@ class TableScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
         child: Column(
           children: [
-            // Header Section
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -71,7 +70,6 @@ class TableScreen extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
-            // Modern Table
             if (studyItems.isEmpty)
               _buildEmptyState()
             else
@@ -91,12 +89,11 @@ class TableScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: Table(
                     columnWidths: const {
-                      0: FlexColumnWidth(1), // Room
-                      1: FlexColumnWidth(1.2), // Date
-                      2: FlexColumnWidth(2), // Subject
+                      0: FlexColumnWidth(1), 
+                      1: FlexColumnWidth(1.2), 
+                      2: FlexColumnWidth(2), 
                     },
                     children: [
-                      // Table Header
                       TableRow(
                         decoration: BoxDecoration(
                           color: Colors.blue.shade800,
@@ -107,7 +104,6 @@ class TableScreen extends StatelessWidget {
                           _buildHeaderCell("اسم المادة"),
                         ],
                       ),
-                      // Table Rows
                       ...studyItems.asMap().entries.map((entry) {
                         final index = entry.key;
                         final item = entry.value;

@@ -18,7 +18,6 @@ class StudyPlannerApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade800),
       ),
-      // Setting text direction to RTL since most content is Arabic
       builder: (context, child) {
         return Directionality(
           textDirection: TextDirection.rtl,

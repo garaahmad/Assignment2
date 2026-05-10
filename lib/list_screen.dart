@@ -30,7 +30,6 @@ class _ListScreenState extends State<ListScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Input Fields Card
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
@@ -110,9 +109,7 @@ class _ListScreenState extends State<ListScreen> {
               ),
             ),
             const SizedBox(height: 20),
-
-            // List View Section
-            if (_showList) ...[
+if (_showList) ...[
               const Text(
                 "المواد الدراسية الحالية:",
                 textAlign: TextAlign.right,
@@ -126,21 +123,50 @@ class _ListScreenState extends State<ListScreen> {
                 itemBuilder: (context, index) {
                   final item = _studyItems[index];
                   return Card(
-                    margin: const EdgeInsets.only(bottom: 10),
+                    margin: const EdgeInsets.only(bottom: 12),
+                    elevation: 2,
+                    shadowColor: Colors.black12,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                     child: ListTile(
-                      trailing: const Icon(Icons.arrow_back_ios, size: 16),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      trailing: Icon(Icons.arrow_back_ios, size: 14, color: Colors.blue.shade300),
                       title: Text(
                         item.name,
                         textAlign: TextAlign.right,
-                        style: const TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue.shade900,
+                          fontSize: 17,
+                        ),
                       ),
-                      subtitle: Text(
-                        "القاعة: ${item.room}",
-                        textAlign: TextAlign.right,
+                      subtitle: Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: Text(
+                          "القاعة: ${item.room}",
+                          textAlign: TextAlign.right,
+                          style: TextStyle(color: Colors.grey.shade600),
+                        ),
                       ),
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.blue.shade100,
-                        child: Text("${index + 1}"),
+                      leading: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: Colors.blue.shade50,
+                          shape: BoxShape.circle,
+                        ),
+                        child: CircleAvatar(
+                          radius: 18,
+                          backgroundColor: Colors.blue.shade800,
+                          child: Text(
+                            "${index + 1}",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   );
@@ -150,7 +176,6 @@ class _ListScreenState extends State<ListScreen> {
 
             const SizedBox(height: 30),
 
-            // Table Button
             OutlinedButton.icon(
               onPressed: () {
                 Navigator.push(
