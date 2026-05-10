@@ -1,18 +1,47 @@
-# study_planner
+# تطبيق منظم المهام الدراسية (Study Planner)
 
-A new Flutter project.
+تطبيق متكامل مبني باستخدام إطار العمل **Flutter**، يهدف إلى مساعدة الطلاب في تنظيم موادهم الدراسية ومتابعة مواعيد الاختبارات والقاعات الدراسية بشكل منظم وجذاب.
 
-## Getting Started
+## 📋 مميزات التطبيق
+*   **واجهة مستخدم عصرية:** تصميم "Premium" يعتمد على أفضل ممارسات تجربة المستخدم (UX/UI).
+*   **إدخال البيانات ديناميكياً:** إمكانية إضافة أسماء المواد وأرقام القاعات وتاريخ المحاضرة.
+*   **عرض قائمة المواد:** عرض فوري للمواد الدراسية الحالية المضافة داخل التطبيق.
+*   **جدول الاختبارات:** توليد جدول اختبارات منظم تلقائياً بناءً على البيانات التي تم إدخالها.
+*   **دعم اللغة العربية:** واجهة متكاملة تدعم اتجاه الكتابة من اليمين إلى اليسار (RTL).
 
-This project is a starting point for a Flutter application.
+## 🚀 شاشات التطبيق
+1.  **الشاشة الرئيسية (Home Screen):** ترحيب بالمستخدم مع تصميم جذاب للدخول إلى التطبيق.
+2.  **شاشة المهام والمدخلات (List Screen):** تحتوي على نماذج لإضافة المواد وعرض قائمة فورية للمواد الحالية.
+3.  **شاشة جدول الاختبارات (Table Screen):** تعرض البيانات المدخلة في جدول احترافي مع ألوان متبادلة وتصميم مريح للعين.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ التقنيات المستخدمة
+*   **Flutter & Dart**
+*   **Stateful Widgets** لإدارة حالة البيانات.
+*   **Custom Models** لتنظيم هيكل البيانات.
+*   **Modern UI Components** (Gradients, Cards, Tables, Custom Shadows).
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 💻 كيفية التشغيل
+للمطورين الراغبين في تشغيل المشروع محلياً:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Assignment2
+1. قم بعمل Clone للمستودع:
+   ```bash
+   git clone https://github.com/garaahmad/Assignment2.git
+   ```
+2. انتقل إلى مجلد المشروع:
+   ```bash
+   cd study_planner
+   ```
+3. قم بتحميل المكتبات المطلوبة:
+   ```bash
+   flutter pub get
+   ```
+4. قم بتشغيل التطبيق:
+   ```bash
+   flutter run
+   ```
+
+## 📝 ملاحظات إضافية
+هذا المشروع هو جزء من متطلبات مساق "مواضيع مختارة" تحت إشراف **أ. محمد فرج الشاعر**.
+
+---
+تم التطوير بواسطة **أحمد** (garaahmad)
